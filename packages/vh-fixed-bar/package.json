@@ -1,0 +1,21 @@
+{
+  "name": "vh-fixed-bar",
+  "version": "0.0.3",
+  "description": "## VH vh-fixed-bar Component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "author": "Durand Neto",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "prop-types": "^15.7.2",
+    "vh-apply-button": "^0.0.1",
+    "vh-faq": "^0.0.4",
+    "vh-text": "^0.0.5",
+    "vh-title-apply-button": "^0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "styled-components": "^4.1.3"
+  }
+}

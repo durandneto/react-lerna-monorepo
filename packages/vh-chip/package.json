@@ -1,0 +1,36 @@
+{
+  "name": "vh-chip",
+  "version": "0.0.1",
+  "description": "VH chip component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "author": "Durand Neto",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "card": "^2.4.0",
+    "faq": "^0.0.1",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
+    "vh-apply-button": "^0.0.1",
+    "vh-card": "^0.0.6",
+    "vh-checkbox": "^0.0.1",
+    "vh-faq": "^0.0.4",
+    "vh-fixed-bar": "^0.0.3",
+    "vh-gallery": "^0.0.1",
+    "vh-highlight-title-cta": "^0.0.4",
+    "vh-image-title-description": "^0.0.1",
+    "vh-img": "^0.0.3",
+    "vh-img-html": "^0.0.1",
+    "vh-line": "^0.0.1",
+    "vh-simple-card": "^0.0.3",
+    "vh-single-filter": "^0.0.1",
+    "vh-text": "^0.0.5",
+    "vh-title-apply-button": "^0.0.1",
+    "vh-title-description": "^0.0.5",
+    "vh-title-description-action": "^0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "styled-components": "^4.1.3"
+  }
+}

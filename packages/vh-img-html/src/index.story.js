@@ -1,0 +1,25 @@
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+
+import VHImgHtml from '.'
+
+storiesOf('Molecules/ImgHtml', module)
+
+.add('default', () => (
+  <VHImgHtml
+    title="2. Update your Profile"
+    source="https://webapp-vanhack-react-prod.azurewebsites.net/a7933bfbd6086f831415aa4ebbda99da.svg"
+    _html='<div class="jss395 jss430 jss446 sc-elJkPf glTLXc"><p class="jss329 jss337 jss357">The second step of the process is to update your profile so it follows the VanHack Standards. In short, this means all fields should be filled as completely as possible. Our Artificial Intelligence will use the data on your profile to match you to the available jobs at the Recruiting Mission.</p><p class="jss329 jss337 jss357">The VanHack Standards are:</p><ul><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">1. The four main sections of your profile are 100% complete. This means: your contact information is filled out; the “Professional Info” section is 100% complete (make sure all experiences listed contain: a brief description of the companys profile; your duties and responsibilities at that job; and the tech stack you worked with); the “Education” section is complete (if you have any); and your main skills are listed, as well as the number of years you have been working with them. Ultimately, the profile should mirror your resume;</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">2. The skills you would like to be tested in are selected (this feature will be available on your profile on Dec. 10th);</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">3. Your “Target Location” is selected (Canada and/or Europe). This will help us understand to which companies we should send your profile;</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">4. All the content on your profile is written professionally and clearly in English, and has been proofread;</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">5. Your resume link is added to your VanHack profile and it follows the <a href="https://docs.google.com/document/d/1dosdSqe2n1gOnLRyjTzSajcNlCBZlbrMc3RZQpoFxr4/edit" target="_blank">VanHack template</a>.</p></li></ul><p class="jss329 jss337 jss357">You can learn more about how to complete your profile <a href="https://goo.gl/ARohjk" target="_blank">here</a>, and see an example of a profile that follows the VanHack Standards <a href="https://goo.gl/sNky1u" target="_blank">here</a>. If you are a premium member, we can help you ensure your profile meets the VanHack Standards.</p></div>'
+  />
+))
+
+.add('With Line', () => (
+  <VHImgHtml
+    title="2. Update your Profile"
+    source="https://webapp-vanhack-react-prod.azurewebsites.net/a7933bfbd6086f831415aa4ebbda99da.svg"
+    _html='<div class="jss395 jss430 jss446 sc-elJkPf glTLXc"><p class="jss329 jss337 jss357">The second step of the process is to update your profile so it follows the VanHack Standards. In short, this means all fields should be filled as completely as possible. Our Artificial Intelligence will use the data on your profile to match you to the available jobs at the Recruiting Mission.</p><p class="jss329 jss337 jss357">The VanHack Standards are:</p><ul><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">1. The four main sections of your profile are 100% complete. This means: your contact information is filled out; the “Professional Info” section is 100% complete (make sure all experiences listed contain: a brief description of the companys profile; your duties and responsibilities at that job; and the tech stack you worked with); the “Education” section is complete (if you have any); and your main skills are listed, as well as the number of years you have been working with them. Ultimately, the profile should mirror your resume;</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">2. The skills you would like to be tested in are selected (this feature will be available on your profile on Dec. 10th);</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">3. Your “Target Location” is selected (Canada and/or Europe). This will help us understand to which companies we should send your profile;</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">4. All the content on your profile is written professionally and clearly in English, and has been proofread;</p></li><li class="sc-gwVKww hTfoWH"><p class="jss329 jss337 jss357">5. Your resume link is added to your VanHack profile and it follows the <a href="https://docs.google.com/document/d/1dosdSqe2n1gOnLRyjTzSajcNlCBZlbrMc3RZQpoFxr4/edit" target="_blank">VanHack template</a>.</p></li></ul><p class="jss329 jss337 jss357">You can learn more about how to complete your profile <a href="https://goo.gl/ARohjk" target="_blank">here</a>, and see an example of a profile that follows the VanHack Standards <a href="https://goo.gl/sNky1u" target="_blank">here</a>. If you are a premium member, we can help you ensure your profile meets the VanHack Standards.</p></div>'
+    withLine
+  />
+))
+

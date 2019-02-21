@@ -1,0 +1,1 @@
+## VH vh-page-events-detail Component

@@ -1,0 +1,19 @@
+{
+  "name": "vh-title-apply-button",
+  "version": "0.0.1",
+  "description": "## VH vh-title-apply-button Component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "author": "Durand Neto",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "prop-types": "^15.7.2",
+    "vh-apply-button": "^0.0.1",
+    "vh-text": "^0.0.5"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "styled-components": "^4.1.3"
+  }
+}

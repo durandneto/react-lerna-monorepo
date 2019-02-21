@@ -1,0 +1,26 @@
+{
+  "name": "vh-line",
+  "version": "0.0.1",
+  "description": "## VH vh-line Component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "author": "Durand Neto",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "faq": "^0.0.1",
+    "prop-types": "^15.7.2",
+    "vh-apply-button": "^0.0.1",
+    "vh-card": "^0.0.6",
+    "vh-faq": "^0.0.4",
+    "vh-fixed-bar": "^0.0.3",
+    "vh-gallery": "^0.0.1",
+    "vh-highlight-title-cta": "^0.0.4",
+    "vh-simple-card": "^0.0.3",
+    "vh-text": "^0.0.5",
+    "vh-title-apply-button": "^0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "styled-components": "^4.1.3"
+  }
+}

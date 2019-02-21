@@ -1,0 +1,45 @@
+{
+  "name": "vh-packages",
+  "version": "0.0.1",
+  "description": "Vanhack Monorepo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/durandneto/monorep.git"
+  },
+  "license": "MIT",
+  "useWorkspaces": true,
+  "author": "Durand Neto",
+  "scripts": {
+    "start": "NODE_ENV=development start-storybook -p 9001 -c .storybook",
+    "test": "jest --coverage --verbose",
+    "bootstrap": "lerna bootstrap",
+    "build": "lerna exec --parallel -- babel --plugins transform-class-properties src -d dist --ignore spec.js,story.js",
+    "build-storybook": "build-storybook",
+    "publish": "lerna publish --skip-git --skip-npm",
+    "prepublish": "npm run build",
+    "precommit": "npm test",
+    "postinstall": "npm run bootstrap"
+  },
+  "devDependencies": {
+    "@storybook/addon-console": "^1.1.0",
+    "@storybook/addon-info": "^4.1.12",
+    "@storybook/react": "^3.0.0-alpha.4",
+    "babel-cli": "^6.24.1",
+    "babel-jest": "^22.4.1",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.24.1",
+    "babel-preset-env": "^1.5.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "glob-loader": "^0.3.0",
+    "jest": "^22.4.2",
+    "lerna": "^2.0.0-rc.4",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-test-renderer": "^16.2.0",
+    "styled-components": "^4.1.3"
+  },
+  "packages": [
+    "packages/*"
+  ]
+}

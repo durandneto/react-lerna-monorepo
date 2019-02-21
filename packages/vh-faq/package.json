@@ -1,0 +1,23 @@
+{
+  "name": "vh-faq",
+  "version": "0.0.4",
+  "description": "## VH vh-faq Component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "author": "Durand Neto",
+  "license": "MIT",
+  "dependencies": {
+    "@material-ui/core": "^3.9.2",
+    "faq": "^0.0.1",
+    "prop-types": "^15.7.2",
+    "ramda": "^0.26.1",
+    "vh-apply-button": "^0.0.1",
+    "vh-fixed-bar": "^0.0.3",
+    "vh-text": "^0.0.5",
+    "vh-title-apply-button": "^0.0.1"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "styled-components": "^4.1.3"
+  }
+}
