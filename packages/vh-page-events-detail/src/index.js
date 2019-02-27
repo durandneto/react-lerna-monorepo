@@ -8,6 +8,7 @@ import VHFaq from 'vh-faq'
 import VHFixedBar from 'vh-fixed-bar'
 import VHImageTitleDescription from 'vh-image-title-description'
 import VHTitleApplyButton from 'vh-title-apply-button'
+import VHTitleDescriptionImage from 'vh-title-description-image'
 
 import {
   PageContainer,
@@ -19,12 +20,11 @@ import {
 
 const VHPageEventsDetail = props => {
 
-  const [showFixedBar, setShowFixedBar] = useState(true);
   const [userApplyingLoader, setUserApplyingLoader] = useState(false);
 
   return (
     <PageContainer>
-      <VHFixedBar show={showFixedBar}>
+      <VHFixedBar template2>
         <VHTitleApplyButton
           title={`${props.page.title} ● ${props.page.subTitle}`}
           _cta={() => setUserApplyingLoader(true)}
@@ -106,11 +106,18 @@ const VHPageEventsDetail = props => {
           />
         </Container>
       </HowToJoinContainer>
-        <VHGallery
-          cover="http://via.placeholder.com/1420x796.png"
-          items={props.gallery}
-          title="Past Events in 2018"
+      <Container>
+        <VHTitleDescriptionImage
+          data={props.funnel.data}
+          title={props.funnel.title}
+          source={props.funnel.source}
         />
+      </Container>
+      <VHGallery
+        cover="http://via.placeholder.com/1420x796.png"
+        items={props.gallery}
+        title="Past Events in 2018"
+      />
       <FaqContainer>
         <Container>
           <VHFaq

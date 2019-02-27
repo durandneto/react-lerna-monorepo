@@ -1,0 +1,1 @@
+## VH vh-title-description-image Component

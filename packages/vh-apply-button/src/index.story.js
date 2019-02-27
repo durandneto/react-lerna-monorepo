@@ -59,3 +59,14 @@ storiesOf('Molecules/ApplyButton', module)
   />
 ))
 
+.add('Button user not applied with diferent label full width disabled', () => (
+  <VHApplyButton
+    applied={false}
+    fullWidth
+    disabled
+    label="Create an User"
+    _cta={action({props:'adas'})}
+    large
+  />
+))
+

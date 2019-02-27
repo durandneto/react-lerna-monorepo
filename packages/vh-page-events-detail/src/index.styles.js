@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const PageContainer = styled.div`
   display: flex;
   flex-direction: column;
+  background-color: #F2F6F9;
 `
 export const Container = styled.div`
   max-width: 1000px;

@@ -5,7 +5,6 @@ import VHLine from 'vh-line'
 import VHApplyButton from 'vh-apply-button'
 
 const VHTitleDescription = (props) => {
-console.log(props)
   return (
   <React.Fragment>
     <Grid container direction={props.direction ? props.direction : 'row' }>

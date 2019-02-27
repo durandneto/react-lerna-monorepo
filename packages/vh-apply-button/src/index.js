@@ -22,15 +22,13 @@ const VHButtonApply = (props) => {
     }
   }
 
-  console.log("VHButtonApply",props,"loading",loading)
-
   return (
     <VHButtonContainer>
       <Container>
         <Button
           variant="contained"
           color="primary"
-          disabled={loading}
+          disabled={props.disabled || loading}
           fullWidth={props.fullWidth}
           onClick={() => {
             handleButtonClick(props._cta)
