@@ -28,9 +28,9 @@ const VHText = (props) => {
       case 'button':
       case 'caption':
       case 'overline':
-        return <VHTextContainer noWrap={props.noWrap} style={styles} align={props.align} variant={props.variant} gutterBottom>{props.text}</VHTextContainer>
+        return <VHTextContainer noWrap={props.noWrap} color={props.materialColor} style={styles} align={props.align} variant={props.variant}>{props.text}</VHTextContainer>
     default:
-      return <VHTextContainer variant="body1" gutterBottom>{props.text}</VHTextContainer>
+      return <VHTextContainer variant="body1">{props.text}</VHTextContainer>
     }
 }
 

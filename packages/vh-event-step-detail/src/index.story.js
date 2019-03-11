@@ -270,6 +270,12 @@ storiesOf('Components/EventStepDetail', module)
 ))
 
 .add('Rejected on Company Screening', () => (
-    <VHEventStepDetail event={currentEventCompanyScreening} />
+    <VHEventStepDetail
+        event={currentEventCompanyScreening}
+        message={{
+            type:"error",
+            message:"Oops!!! There is something wrong"
+        }}
+    />
 ))
 

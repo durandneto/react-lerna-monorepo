@@ -59,6 +59,13 @@ storiesOf('Atoms/Text', module)
       <div style={{backgroundColor:"#0675CE"}}>
         <VHText color="white" variant="h1" text="h1. White" />
       </div>
-      <VHText color="primary" variant="h2" text="h2. Primary" />
+      <VHText color="primary" variant="h2" text="h2. Primary VH" />
+      <VHText materialColor="primary" variant="h2" text="h2. primary" />
+      <VHText materialColor="error" variant="h2" text="h2. error" />
+      <VHText materialColor="default" variant="h2" text="h2. default" />
+      <VHText materialColor="inherit" variant="h2" text="h2. inherit" />
+      <VHText materialColor="secondary" variant="h2" text="h2. secondary" />
+      <VHText materialColor="textPrimary" variant="h2" text="h2. textPrimary" />
+      <VHText materialColor="textSecondary" variant="h2" text="h2. textSecondary" />
     </div>
   ))

@@ -273,7 +273,7 @@ const data = {
   }
 }
 
-storiesOf('Pages/Events', module)
+storiesOf('Templates/Events/By slug', module)
 
 .add('Detail Page with applied User', () => (
   <VHPageEventsDetail

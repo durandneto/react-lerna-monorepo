@@ -26,7 +26,7 @@ const VHButtonApply = (props) => {
     <VHButtonContainer>
       <Container>
         <Button
-          variant="contained"
+          variant={props.outline ? "outlined" : "contained" }
           color="primary"
           disabled={props.disabled || loading}
           fullWidth={props.fullWidth}

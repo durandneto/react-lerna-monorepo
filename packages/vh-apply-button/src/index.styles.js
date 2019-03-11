@@ -3,7 +3,6 @@ import CircularProgress from '@material-ui/core/CircularProgress'
 
 export const VHButtonContainer = styled.div`
     display: flex;
-    alignItems: center;
 `
 export const Container = styled.div`
     position: relative;

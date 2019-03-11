@@ -4,7 +4,7 @@ import { take } from 'ramda'
 
 import VHText from 'vh-text'
 import {
-  Container, Header, Title, Content,
+  Container, Header, Content, FaqContainer
 } from './index.styles'
 
 class Faq extends Component {
@@ -31,62 +31,64 @@ class Faq extends Component {
     const { currentTab, showMore } = this.state
     const list = showMore ? currentTab.content : take(4, currentTab.content)
     return (
-      <React.Fragment>
-        <Grid container>
-          <Grid item sm={4}></Grid>
-          <Grid item sm={8}>
-            <VHText
-              variant="h4"
-              text="Frequently Asked Questions"
-            />
+      <FaqContainer primary={this.props.primary}>
+        <Container>
+          <Grid container>
+            <Grid item sm={4}></Grid>
+            <Grid item sm={8}>
+              <VHText
+                variant="h4"
+                text="Frequently Asked Questions"
+              />
+            </Grid>
           </Grid>
-        </Grid>
-        <Grid container>
-          <Grid item sm={4}>
-            <Header>
-            {
-              tabs.map((tab, index) => (
-                <div key={tab.title} onClick={() => this.handleSelect(tab)} style={{cursor: 'pointer', marginBottom: "8px"}}>
-                  <VHText
-                    color={tab.title === currentTab.title && "primary"}
-                    variant="button"
-                    text={ tab.title }
-                    align="right"
-                  />
-                </div>
-              ))
-            }
-            </Header>
-          </Grid>
-          <Grid item sm={8}>
-            <Content>
-            {
-              list.map(({ question, answer }) => (
-                <div key={question} style={{marginBottom: "24px"}}>
-                  <div style={{marginBottom: "8px"}}>
+          <Grid container>
+            <Grid item sm={3} xs={12}>
+              <Header>
+              {
+                tabs.map((tab, index) => (
+                  <div key={tab.title} onClick={() => this.handleSelect(tab)} style={{cursor: 'pointer', marginBottom: "8px"}}>
                     <VHText
-                      variant="subtitle2"
-                      text={ question }
+                      color={tab.title === currentTab.title && "primary"}
+                      variant="button"
+                      text={ tab.title }
+                      align="right"
                     />
                   </div>
-                  <VHText
-                    variant="caption"
-                    text={ answer }
-                  />
-                </div>
-              ))
-            }
-            {
-              currentTab.content.length > 4 && (
-                <Button onClick={this.handleShowMore} color="primary">
-                  { showMore ? 'Show less' : 'Show more'}
-                </Button>
-              )
-            }
-            </Content>
+                ))
+              }
+              </Header>
+            </Grid>
+            <Grid item sm={8}>
+              <Content>
+              {
+                list.map(({ question, answer }) => (
+                  <div key={question} style={{marginBottom: "24px"}}>
+                    <div style={{marginBottom: "8px"}}>
+                      <VHText
+                        variant="subtitle2"
+                        text={ question }
+                      />
+                    </div>
+                    <VHText
+                      variant="caption"
+                      text={ answer }
+                    />
+                  </div>
+                ))
+              }
+              {
+                currentTab.content.length > 4 && (
+                  <Button onClick={this.handleShowMore} color="primary">
+                    { showMore ? 'Show less' : 'Show more'}
+                  </Button>
+                )
+              }
+              </Content>
+            </Grid>
           </Grid>
-        </Grid>
-      </React.Fragment>
+        </Container>
+      </FaqContainer>
     )
   }
 }

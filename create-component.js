@@ -98,8 +98,7 @@ import { action } from '@storybook/addon-actions'
 import ${componentName} from '.'
 
 storiesOf('${StorybookName}/${componentName.split('VH')[1]}', module)
-
-.add('Button default', () => (
+.add('Default', () => (
     <${componentName} variant="contained" onClick={action()}>
         New Vanhack Component Created
     </${componentName}>
