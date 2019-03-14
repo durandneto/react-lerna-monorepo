@@ -275,7 +275,7 @@ const data = {
 
 storiesOf('Templates/Events/By slug', module)
 
-.add('Detail Page with applied User', () => (
+.add('VHPageEventsDetail Detail Page with applied User', () => (
   <VHPageEventsDetail
     page = { data.page }
     cards = { data.cards }
@@ -289,7 +289,7 @@ storiesOf('Templates/Events/By slug', module)
   />
 ))
 
-.add('Detail Page with non-user', () => (
+.add('VHPageEventsDetail Detail Page with non-user', () => (
   <VHPageEventsDetail
     page = { data.page }
     cards = { data.cards }

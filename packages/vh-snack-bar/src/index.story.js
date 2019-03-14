@@ -6,7 +6,7 @@ import VHSnackBar from '.'
 
 storiesOf('Components/SnackBar', module)
 
-.add('wrapped success', () => (
+.add('VHSnackBar wrapped success', () => (
     <div style={{display: 'flex', justifyContent: 'center'}}>
         <VHSnackBar
         onClose={action()}
@@ -16,14 +16,14 @@ storiesOf('Components/SnackBar', module)
     </div>
 ))
 
-.add('default', () => (
+.add('VHSnackBar default', () => (
         <VHSnackBar
         onClose={action()}
         message="This is a success message!"
     />
 ))
 
-.add('success', () => (
+.add('VHSnackBar success', () => (
         <VHSnackBar
         onClose={action()}
         type="success"
@@ -31,7 +31,7 @@ storiesOf('Components/SnackBar', module)
     />
 ))
 
-.add('error', () => (
+.add('VHSnackBar error', () => (
         <VHSnackBar
         onClose={action()}
         type="error"
@@ -39,7 +39,7 @@ storiesOf('Components/SnackBar', module)
     />
 ))
 
-.add('warning', () => (
+.add('VHSnackBar warning', () => (
         <VHSnackBar
         onClose={action()}
         type="warning"

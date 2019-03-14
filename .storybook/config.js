@@ -1,12 +1,9 @@
 import React from 'react'
-import {configure, setAddon} from '@storybook/react'
-import infoAddon, {setDefaults} from '@storybook/addon-info'
-import '@storybook/addon-console'
+import {configure} from '@storybook/react'
+import { withInfo } from '@storybook/addon-info'
 
 function loadStories () {
   require('glob-loader!./stories.pattern')
 }
-
-setAddon(infoAddon)
-
+// addDecorator(withInfo)
 configure(loadStories, module)

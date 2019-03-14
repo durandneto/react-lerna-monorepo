@@ -5,7 +5,7 @@ import VHError from '.'
 
 storiesOf('Components/Error', module)
 
-.add('Button default', () => (
+.add('Error - Button default', () => (
   <VHError
     title="Oops!"
     subTitle="Internal Server Error"

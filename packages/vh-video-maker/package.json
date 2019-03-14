@@ -1,0 +1,17 @@
+{
+  "name": "vh-video-maker",
+  "version": "0.0.1",
+  "description": "## VH vh-video-maker Component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "author": "Durand Neto",
+  "license": "MIT",
+  "dependencies": {
+    "prop-types": "^15.7.2",
+    "recordrtc": "^5.5.4"
+  },
+  "peerDependencies": {
+    "react": "^16.2.0",
+    "styled-components": "^4.1.3"
+  }
+}

@@ -33,7 +33,7 @@ const mock = {
 }
 
 storiesOf('Components/Cards/Image Title List', module)
-.add('Default', () => (
+.add('VHCardImageTitleList Default', () => (
     <VHCardImageTitleList data={mock} />
 ))
 

@@ -7,21 +7,7 @@
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "@material-ui/styles": "^3.0.0-alpha.10",
-    "classnames": "^2.2.6",
-    "prop-types": "^15.7.2",
-    "vh-apply-button": "^0.0.1",
-    "vh-card": "^0.0.6",
-    "vh-card-image-title-description-action": "^0.0.1",
-    "vh-card-image-title-list": "^0.0.1",
-    "vh-event-card": "^0.0.1",
-    "vh-event-header": "^0.0.1",
-    "vh-faq": "^0.0.4",
-    "vh-image-title-description": "^0.0.1",
-    "vh-image-title-list": "^0.0.1",
-    "vh-img": "^0.0.3",
-    "vh-text": "^0.0.5"
+    "prop-types": "^15.7.2"
   },
   "peerDependencies": {
     "react": "^16.2.0",

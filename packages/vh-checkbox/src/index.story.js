@@ -5,7 +5,7 @@ import VHCheckbox from '.'
 
 storiesOf('Atoms/Checkbox', module)
 
-  .add('Partial checked', () => (
+  .add('VHCheckbox Partial checked', () => (
     <Fragment>
       <VHCheckbox rootIndex={0} itemIndex={0}  partial label="Canada" value="vanhack1" _onChange={action()} checked={true} />
       <VHCheckbox rootIndex={0} itemIndex={1}  partial label="Canada" value="vanhack2" _onChange={action()} checked={true} />
@@ -13,7 +13,7 @@ storiesOf('Atoms/Checkbox', module)
     </Fragment>
   ))
 
-  .add('Partial checked without label', () => (
+  .add('VHCheckbox Partial checked without label', () => (
     <Fragment>
       <VHCheckbox rootIndex={0} itemIndex={0}  noLabel partial label="Canada" value="vanhack1" _onChange={action()} checked={true} />
       <VHCheckbox rootIndex={0} itemIndex={1}  noLabel partial label="Canada" value="vanhack2" _onChange={action()} checked={true} />
@@ -21,7 +21,7 @@ storiesOf('Atoms/Checkbox', module)
     </Fragment>
   ))
 
-  .add('Checked', () => (
+  .add('VHCheckbox Checked', () => (
     <Fragment>
       <VHCheckbox rootIndex={0} itemIndex={0}  label="Canada" value="vanhack1" _onChange={action()} checked={true} />
       <VHCheckbox rootIndex={0} itemIndex={1}  label="Canada" value="vanhack2" _onChange={action()} checked={true} />
@@ -29,7 +29,7 @@ storiesOf('Atoms/Checkbox', module)
     </Fragment>
   ))
 
-  .add('Checked without label', () => (
+  .add('VHCheckbox Checked without label', () => (
     <Fragment>
       <VHCheckbox rootIndex={0} itemIndex={0}  noLabel label="Canada" value="vanhack1" _onChange={action()} checked={true} />
       <VHCheckbox rootIndex={0} itemIndex={1}  noLabel label="Canada" value="vanhack2" _onChange={action()} checked={true} />
@@ -37,7 +37,7 @@ storiesOf('Atoms/Checkbox', module)
     </Fragment>
   ))
 
-  .add('Unchecked', () => (
+  .add('VHCheckbox Unchecked', () => (
     <Fragment>
       <VHCheckbox rootIndex={0} itemIndex={0}  label="Canada" value="vanhack1" _onChange={action()} checked={false} />
       <VHCheckbox rootIndex={0} itemIndex={1}  label="Canada" value="vanhack2" _onChange={action()} checked={false} />
@@ -45,7 +45,7 @@ storiesOf('Atoms/Checkbox', module)
     </Fragment>
   ))
 
-  .add('Unchecked without label', () => (
+  .add('VHCheckbox Unchecked without label', () => (
     <Fragment>
       <VHCheckbox rootIndex={0} itemIndex={0}  noLabel label="Canada" value="vanhack1" _onChange={action()} checked={false} />
       <VHCheckbox rootIndex={0} itemIndex={1}  noLabel label="Canada" value="vanhack2" _onChange={action()} checked={false} />
@@ -53,7 +53,7 @@ storiesOf('Atoms/Checkbox', module)
     </Fragment>
   ))
 
-  .add('All Checkboxes together', () => (
+  .add('VHCheckbox All Checkboxes together', () => (
     <Fragment>
       <p>
         <VHCheckbox rootIndex={0} itemIndex={0}  noLabel label="Canada" value="vanhack2" _onChange={action()} checked={false} />

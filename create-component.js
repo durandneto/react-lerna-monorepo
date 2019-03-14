@@ -49,12 +49,11 @@ function Question(){
   "module": "src/index.js",
   "author": "Durand Neto",
   "license": "MIT",
-  "dependencies": {
-    "@material-ui/core": "^3.9.2",
-    "prop-types": "^15.7.2"
-  },
+  "dependencies": {},
   "peerDependencies": {
+    "prop-types": "^15.7.2"
     "react": "^16.2.0",
+    "@material-ui/core": "^3.9.2",
     "styled-components": "^4.1.3"
   }
 }
@@ -98,10 +97,10 @@ import { action } from '@storybook/addon-actions'
 import ${componentName} from '.'
 
 storiesOf('${StorybookName}/${componentName.split('VH')[1]}', module)
-.add('Default', () => (
-    <${componentName} variant="contained" onClick={action()}>
-        New Vanhack Component Created
-    </${componentName}>
+.add('${componentName} Default', () => (
+  <${componentName} variant="contained" onClick={action()}>
+      New Vanhack Component Created
+  </${componentName}>
 ))
 
 `);
@@ -169,9 +168,9 @@ Q.add([
   },
   {
     question:"What kind of component?",
-    possibleAnswers:"Atoms: 1 , Molecules: 2, Components: 3 or Pages: 4?",
+    possibleAnswers:"Atoms: 1 , Molecules: 2, Components: 3 or Templates: 4?",
     possibleValues: [1,2,3,4],
-    mapStorybookLabel: ['Atoms', 'Molecules', "Components", "Pages"],
+    mapStorybookLabel: ['Atoms', 'Molecules', "Components", "Templates"],
   },
 ])
 

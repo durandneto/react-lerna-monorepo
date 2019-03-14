@@ -6,7 +6,7 @@ const itemsJSON = JSON.parse('[{"slug":"countries","name":"Location","items":[{"
 
 storiesOf('Molecules/DynamicChips', module)
 
-  .add('Orange chips', () => (
+  .add('VHDynamicChips Orange chips', () => (
     <VHDynamicChips
       items={itemsJSON}
       _onRemove={action()}

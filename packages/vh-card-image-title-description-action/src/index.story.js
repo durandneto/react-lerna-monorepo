@@ -6,7 +6,7 @@ import VHCardImageTitleDescriptionAction from '.'
 
 storiesOf('Components/Cards/Image Title Description Action', module)
 
-.add('Button default', () => (
+.add('VHCardImageTitleDescriptionAction default', () => (
     <VHCardImageTitleDescriptionAction data={
         {
             source: "https://webapp-vanhack-react-prod.azurewebsites.net/a7933bfbd6086f831415aa4ebbda99da.svg",

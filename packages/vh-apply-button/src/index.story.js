@@ -1,12 +1,11 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
-
 import VHApplyButton from '.'
 
 storiesOf('Molecules/ApplyButton', module)
 
-.add('Button user applied', () => (
+.add('VHApplyButton user applied', () => (
   <VHApplyButton
     applied={true}
     _cta={action()}
@@ -14,7 +13,7 @@ storiesOf('Molecules/ApplyButton', module)
     />
 ))
 
-.add('Button user not applied', () => (
+.add('VHApplyButton user not applied', () => (
   <VHApplyButton
     applied={false}
     _cta={action({props:'adas'})}
@@ -22,7 +21,7 @@ storiesOf('Molecules/ApplyButton', module)
   />
 ))
 
-.add('Button forcing loadding', () => (
+.add('VHApplyButton forcing loadding', () => (
   <VHApplyButton
     applied={false}
     loading
@@ -31,7 +30,7 @@ storiesOf('Molecules/ApplyButton', module)
   />
 ))
 
-.add('Button user not applied with diferent label', () => (
+.add('VHApplyButton user not applied with diferent label', () => (
   <VHApplyButton
     applied={false}
     label="Create an User"
@@ -40,7 +39,7 @@ storiesOf('Molecules/ApplyButton', module)
   />
 ))
 
-.add('Button user not applied with diferent label and loading', () => (
+.add('VHApplyButton user not applied with diferent label and loading', () => (
   <VHApplyButton
     loading
     applied={false}
@@ -49,7 +48,7 @@ storiesOf('Molecules/ApplyButton', module)
     large
   />
 ))
-.add('Button user not applied with diferent label full width', () => (
+.add('VHApplyButton user not applied with diferent label full width', () => (
   <VHApplyButton
     applied={false}
     fullWidth
@@ -59,7 +58,7 @@ storiesOf('Molecules/ApplyButton', module)
   />
 ))
 
-.add('Button user not applied with diferent label full width disabled', () => (
+.add('VHApplyButton user not applied with diferent label full width disabled', () => (
   <VHApplyButton
     applied={false}
     fullWidth

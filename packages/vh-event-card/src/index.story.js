@@ -100,7 +100,7 @@ const event = {
 storiesOf('Components/Cards/Event', module)
 
 
-.add('Local Applied', () => (
+.add('VHEventCard Local Applied', () => (
     <div style={{display: 'flex', flexWrap: 'wrap'}}>
         <VHEventCard
         onDetail={action()}
@@ -137,7 +137,7 @@ storiesOf('Components/Cards/Event', module)
     </div>
 ))
 
-.add('Local', () => (
+.add('VHEventCard Local', () => (
     <div style={{display: 'flex', flexWrap: 'wrap'}}>
         <VHEventCard
             onApply={action()}
@@ -182,7 +182,7 @@ storiesOf('Components/Cards/Event', module)
     </div>
 ))
 
-.add('Online', () => (
+.add('VHEventCard Online', () => (
     <div style={{display: 'flex', flexWrap: 'wrap'}}>
         <VHEventCard
             onApply={action()}
@@ -232,7 +232,7 @@ storiesOf('Components/Cards/Event', module)
     </div>
 ))
 
-.add('Application closed', () => (
+.add('VHEventCard Application closed', () => (
     <div style={{display: 'flex', flexWrap: 'wrap'}}>
         <VHEventCard
             data={eventPassed}

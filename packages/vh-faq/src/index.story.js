@@ -182,7 +182,7 @@ const faqContent = [
 
 storiesOf('Components/Faq', module)
 
-.add('Default', () => (
+.add('VHFaq Default', () => (
   <VHFaq
     tabs = { faqContent }
   />

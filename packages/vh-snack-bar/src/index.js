@@ -1,12 +1,11 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 import CheckCircleIcon from '@material-ui/icons/CheckCircle'
 import ErrorIcon from '@material-ui/icons/Error'
 import InfoIcon from '@material-ui/icons/Info'
 import CloseIcon from '@material-ui/icons/Close'
 import IconButton from '@material-ui/core/IconButton'
-import Snackbar from '@material-ui/core/Snackbar'
 import WarningIcon from '@material-ui/icons/Warning'
 
 import {
@@ -52,10 +51,10 @@ function VHSnackBar(props) {
   )
 }
 
-VHSnackBar.propTypes = {
-  message: PropTypes.node,
-  onClose: PropTypes.func,
-  variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired,
-}
+// VHSnackBar.propTypes = {
+//   message: PropTypes.node,
+//   onClose: PropTypes.func,
+//   variant: PropTypes.oneOf(['success', 'warning', 'error', 'info']).isRequired,
+// }
 
 export default VHSnackBar

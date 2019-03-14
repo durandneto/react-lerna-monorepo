@@ -7,12 +7,8 @@
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
     "prop-types": "^15.7.2",
-    "vh-apply-button": "^0.0.1",
     "vh-card": "^0.0.6",
-    "vh-card-image-title-list": "^0.0.1",
-    "vh-faq": "^0.0.4",
     "vh-image-title-description": "^0.0.1"
   },
   "peerDependencies": {

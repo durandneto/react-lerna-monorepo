@@ -7,7 +7,6 @@
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
-    "@material-ui/core": "^3.9.2",
     "prop-types": "^15.7.2",
     "vh-apply-button": "^0.0.1",
     "vh-card": "^0.0.6",

@@ -5,7 +5,7 @@ import VHFixedBar from '.'
 
 storiesOf('Components/FixedBar/template1', module)
 
-.add('Show fixed bar', () => (
+.add('VHFixedBar template1 Show fixed bar', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar>
             New Vanhack Component Created
@@ -24,7 +24,7 @@ storiesOf('Components/FixedBar/template1', module)
     </div>
 ))
 
-.add('Show fixed bar size2', () => (
+.add('VHFixedBar template1 Show fixed bar size2', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar size2>
             New Vanhack Component Created
@@ -43,7 +43,7 @@ storiesOf('Components/FixedBar/template1', module)
     </div>
 ))
 
-.add('Show fixed bar size3', () => (
+.add('VHFixedBar template1 Show fixed bar size3', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar size3>
             New Vanhack Component Created
@@ -62,7 +62,7 @@ storiesOf('Components/FixedBar/template1', module)
     </div>
 ))
 
-.add('Show fixed bar size4', () => (
+.add('VHFixedBar template1 Show fixed bar size4', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar size4>
             New Vanhack Component Created
@@ -80,9 +80,10 @@ storiesOf('Components/FixedBar/template1', module)
         Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />Component <br />
     </div>
 ))
+
 storiesOf('Components/FixedBar/template2', module)
 
-.add('Show fixed bar', () => (
+.add('VHFixedBar template2 Show fixed bar', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar template2>
             New Vanhack Component Created
@@ -101,7 +102,7 @@ storiesOf('Components/FixedBar/template2', module)
     </div>
 ))
 
-.add('Show fixed bar size2', () => (
+.add('VHFixedBar template2 Show fixed bar size2', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar template2 size2>
             New Vanhack Component Created
@@ -120,7 +121,7 @@ storiesOf('Components/FixedBar/template2', module)
     </div>
 ))
 
-.add('Show fixed bar size3', () => (
+.add('VHFixedBar template2 Show fixed bar size3', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar template2 size3>
             New Vanhack Component Created
@@ -139,7 +140,7 @@ storiesOf('Components/FixedBar/template2', module)
     </div>
 ))
 
-.add('Show fixed bar size4', () => (
+.add('VHFixedBar template2 Show fixed bar size4', () => (
     <div style={{background: "silver"}}>
         <VHFixedBar template2 size4>
             New Vanhack Component Created

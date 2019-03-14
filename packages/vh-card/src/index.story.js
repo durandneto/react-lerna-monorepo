@@ -4,7 +4,7 @@ import VHCard from '.'
 
 storiesOf('Atoms/Card', module)
 
-  .add('Card Desktop', () => (
+  .add('VHCard Card Desktop', () => (
     <Fragment>
       <VHCard>
       Content<br />Content<br />Content<br />Content<br />
@@ -15,7 +15,7 @@ storiesOf('Atoms/Card', module)
     </Fragment>
   ))
 
-  .add('Card Desktop idle', () => (
+  .add('VHCard Card Desktop idle', () => (
     <Fragment>
       <VHCard idle>
       Content idle<br />Content idle<br />Content idle<br />Content idle<br />
@@ -23,10 +23,13 @@ storiesOf('Atoms/Card', module)
       <VHCard idle padding2>
       Content idle<br />Content idle<br />Content idle<br />Content idle<br />
       </VHCard>
+      <VHCard idle padding3>
+      Content idle<br />Content idle<br />Content idle<br />Content idle<br />
+      </VHCard>
     </Fragment>
   ))
 
-  .add('Card Desktop Error', () => (
+  .add('VHCard Card Desktop Error', () => (
     <Fragment>
       <VHCard error>
       Content Error <br />Content Error <br />Content Error <br />Content Error <br />
@@ -37,7 +40,7 @@ storiesOf('Atoms/Card', module)
     </Fragment>
   ))
 
-  .add('Card Desktop panel', () => (
+  .add('VHCard Card Desktop panel', () => (
     <Fragment>
       <VHCard panel>
       Content Panel <br />Content Panel <br />Content Panel <br />Content Panel <br />

@@ -1,25 +1,15 @@
 import React from 'react'
 import Button from '@material-ui/core/Button'
 import VHtext from 'vh-text'
+// import PropTypes from 'prop-types'
 
 import { VHButtonContainer, Container, VHCircularProgress } from './index.styles'
 
-const VHButtonApply = (props) => {
-
-  if ( props.applied ) {
+const VHButtonApply = props => {
+  if (props.applied ) {
     return (
       <VHtext variant="caption" text="You applied successfully." />
     )
-  }
-  const loadingInitialState = props.loading
-
-  const [loading, setLoading] = React.useState(loadingInitialState)
-
-  const handleButtonClick = _callback => {
-    if (!loading) {
-      setLoading(true)
-      _callback()
-    }
   }
 
   return (
@@ -28,21 +18,25 @@ const VHButtonApply = (props) => {
         <Button
           variant={props.outline ? "outlined" : "contained" }
           color="primary"
-          disabled={props.disabled || loading}
+          disabled={props.isDisabled || props.loading}
           fullWidth={props.fullWidth}
-          onClick={() => {
-            handleButtonClick(props._cta)
-          }}
+          onClick={props._cta}
           size={props.large && "large"}
         >
-        {
-          props.label ? props.label : loading ? 'Applying' : 'Apply'
-        }
+          {
+            props.label ? props.label : props.loading ? 'Applying' : 'Apply'
+          }
         </Button>
-        {loading && <VHCircularProgress size={24}/>}
+        {props.loading && <VHCircularProgress size={24} />}
       </Container>
     </VHButtonContainer>
   )
 }
+
+// VHButtonApply.propTypes = {
+//   items: PropTypes.arrayOf(
+//     PropTypes.string,
+//   ),
+// }
 
 export default VHButtonApply

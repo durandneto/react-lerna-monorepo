@@ -6,7 +6,7 @@ import VHHighlightTitleCta from '.'
 
 storiesOf('Components/HighlightTitleCta', module)
 
-.add('Defatult template 1', () => (
+.add('VHHighlightTitleCta Defatult template 1', () => (
   <VHHighlightTitleCta
     title="Leap Calgary"
     subTitle="April 8th - 10th,  2019"
@@ -19,7 +19,7 @@ storiesOf('Components/HighlightTitleCta', module)
   />
 ))
 
-.add('Color white template 1', () => (
+.add('VHHighlightTitleCta Color white template 1', () => (
   <div style={{backgroundColor:"#0675CE"}}>
     <VHHighlightTitleCta
     title="Leap Calgary"
@@ -35,7 +35,7 @@ storiesOf('Components/HighlightTitleCta', module)
   </div>
 ))
 
-.add('Color primary template 1', () => (
+.add('VHHighlightTitleCta Color primary template 1', () => (
   <VHHighlightTitleCta
     title="Leap Calgary"
     subTitle="April 8th - 10th,  2019"
@@ -48,7 +48,7 @@ storiesOf('Components/HighlightTitleCta', module)
     }
   />
 ))
-.add('Defatult template 2', () => (
+.add('VHHighlightTitleCta Defatult template 2', () => (
   <VHHighlightTitleCta
     title="Leap Calgary"
     subTitle="April 8th - 10th,  2019"
@@ -62,7 +62,7 @@ storiesOf('Components/HighlightTitleCta', module)
   />
 ))
 
-.add('Color white template 2', () => (
+.add('VHHighlightTitleCta Color white template 2', () => (
   <div style={{backgroundColor:"#0675CE"}}>
     <VHHighlightTitleCta
     title="Leap Calgary"
@@ -79,7 +79,7 @@ storiesOf('Components/HighlightTitleCta', module)
   </div>
 ))
 
-.add('Color primary template 2', () => (
+.add('VHHighlightTitleCta Color primary template 2', () => (
   <VHHighlightTitleCta
     title="Leap Calgary"
     subTitle="April 8th - 10th,  2019"
@@ -94,7 +94,7 @@ storiesOf('Components/HighlightTitleCta', module)
   />
 ))
 
-.add('Color primary template 2 with applied user', () => (
+.add('VHHighlightTitleCta Color primary template 2 with applied user', () => (
   <VHHighlightTitleCta
     title="Leap Calgary"
     subTitle="April 8th - 10th,  2019"
@@ -110,7 +110,7 @@ storiesOf('Components/HighlightTitleCta', module)
   />
 ))
 
-.add('Color primary template 2 with loading', () => (
+.add('VHHighlightTitleCta Color primary template 2 with loading', () => (
   <VHHighlightTitleCta
     title="Leap Calgary"
     subTitle="April 8th - 10th,  2019"

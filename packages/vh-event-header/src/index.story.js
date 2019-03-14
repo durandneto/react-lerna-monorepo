@@ -76,21 +76,21 @@ const eventApplied = {
 
 storiesOf('Components/Header/Events', module)
 
-.add('With a pasted event', () => (
+.add('VHEventHeader With a pasted event', () => (
     <VHEventHeader
         data={event}
         onApply={action()}
         onDetail={action()}
     />
 ))
-.add('With a non-user', () => (
+.add('VHEventHeader With a non-user', () => (
     <VHEventHeader
         data={eventPossibleApply}
         onApply={action()}
         onDetail={action()}
     />
 ))
-.add('With an applied user', () => (
+.add('VHEventHeader With an applied user', () => (
     <VHEventHeader
         data={eventApplied}
         onApply={action()}

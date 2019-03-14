@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+// import PropTypes from 'prop-types'
 
 import {
   ImageObject,
@@ -7,10 +7,10 @@ import {
   Container,
   Content,
   Gallery,
-} from './index.styles';
+} from './index.styles'
 
 const VHGallery = props => {
-  const { items } = props;
+  const { items } = props
 
   return (
     <Container cover={props.cover}>
@@ -32,13 +32,13 @@ const VHGallery = props => {
         </Gallery>
       </Content>
     </Container>
-  );
-};
+  )
+}
 
-VHGallery.propTypes = {
-  items: PropTypes.arrayOf(
-    PropTypes.string.isRequired,
-  ).isRequired,
-};
+// VHGallery.propTypes = {
+//   items: PropTypes.arrayOf(
+//     PropTypes.string.isRequired,
+//   ).isRequired,
+// }
 
-export default VHGallery;
+export default VHGallery

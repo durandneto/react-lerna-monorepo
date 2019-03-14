@@ -276,7 +276,7 @@ const generalInformation = [
   ];
 
 storiesOf('Templates/English Verification', module)
-.add('Unlogged user', () => (
+.add('VHPageEnglishVerification Unlogged user', () => (
     <VHPageEnglishVerification
         cards={card}
         cardAction={cardAction}

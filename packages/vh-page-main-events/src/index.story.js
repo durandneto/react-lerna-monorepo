@@ -4,7 +4,6 @@ import { action } from '@storybook/addon-actions'
 
 import VHPageMainEvents from '.'
 
-
 const mainEvent = {
     applied: false,
     city: "São Paulo",
@@ -86,13 +85,13 @@ nextEvents.push(mainEventApplied)
 
 storiesOf('Templates/Events/main', module)
 
-.add('Default', () => (
+.add('VHPageMainEvents Default', () => (
     <VHPageMainEvents mainEvent={mainEventApplied} nextEvents={nextEvents} />
 ))
-.add('with a non-User', () => (
+.add('VHPageMainEvents with a non-User', () => (
     <VHPageMainEvents mainEvent={mainEvent} nextEvents={nextEvents} />
 ))
-.add('with a pasted event', () => (
+.add('VHPageMainEvents with a pasted event', () => (
     <VHPageMainEvents mainEvent={mainEventPasted} nextEvents={nextEvents} />
 ))
 
