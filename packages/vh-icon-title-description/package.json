@@ -1,0 +1,23 @@
+{
+  "name": "vh-icon-title-description",
+  "version": "0.0.1",
+  "description": "## VH vh-icon-title-description Component",
+  "main": "dist/index.js",
+  "module": "src/index.js",
+  "author": "Durand Neto",
+  "license": "MIT",
+  "dependencies": {
+    "vh-confirm-modal": "^0.0.1",
+    "vh-img": "^0.0.3",
+    "vh-modal": "^0.0.1",
+    "vh-page-video-record": "^0.0.1",
+    "vh-text": "^0.0.5",
+    "vh-time": "^0.0.1"
+  },
+  "peerDependencies": {
+    "@material-ui/core": "^3.9.2",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
+    "styled-components": "^4.1.3"
+  }
+}

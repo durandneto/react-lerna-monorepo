@@ -1,5 +1,7 @@
 import React from 'react'
 import { Grid, Hidden } from '@material-ui/core'
+// import PropTypes from 'prop-types'
+
 import VHText from 'vh-text'
 import VHLine from 'vh-line'
 import VHApplyButton from 'vh-apply-button'
@@ -79,5 +81,12 @@ const VHTitleDescription = (props) => {
     }
   </React.Fragment>
 )}
+
+// VHTitleDescription.propTypes = {
+//   items: PropTypes.arrayOf(
+//     PropTypes.string,
+//   ),
+// }
+
 
 export default VHTitleDescription

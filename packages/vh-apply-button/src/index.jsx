@@ -13,11 +13,11 @@ const VHButtonApply = props => {
   }
 
   return (
-    <VHButtonContainer>
-      <Container>
+    <VHButtonContainer fullWidth={props.fullWidth}>
+      <Container fullWidth={props.fullWidth}>
         <Button
           variant={props.outline ? "outlined" : "contained" }
-          color="primary"
+          color={props.color ? props.color : "primary" }
           disabled={props.isDisabled || props.loading}
           fullWidth={props.fullWidth}
           onClick={props._cta}

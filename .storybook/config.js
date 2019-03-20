@@ -1,6 +1,6 @@
 import React from 'react'
 import {configure} from '@storybook/react'
-import { withInfo } from '@storybook/addon-info'
+import '@storybook/addon-console'
 
 function loadStories () {
   require('glob-loader!./stories.pattern')

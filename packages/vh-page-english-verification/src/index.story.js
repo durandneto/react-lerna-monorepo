@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
 
 import VHPageEnglishVerification from '.'
 
@@ -92,12 +93,9 @@ card.push(resources)
 card.push(tips)
 
 const cardAction = {
-    source: "https://webapp-vanhack-react-prod.azurewebsites.net/a7933bfbd6086f831415aa4ebbda99da.svg",
-    description: "Before starting your English Verification Test, please perform a check on your equipment to assure video and audio quality.",
-    cta: {
-      label: "Check Audio and Video",
-      _callback: action()
-    },
+  source: "https://webapp-vanhack-react-prod.azurewebsites.net/a7933bfbd6086f831415aa4ebbda99da.svg",
+  description: "Before starting your English Verification Test, please perform a check on your equipment to assure video and audio quality.",
+  label: "Check Audio and Video",
 }
 
 
@@ -281,6 +279,7 @@ storiesOf('Templates/English Verification', module)
         cards={card}
         cardAction={cardAction}
         faq={faqContent}
+        onStartTest={linkTo('Templates/Modal/Video Record', 'VHModalVideoRecord Default')}
     />
 ))
 

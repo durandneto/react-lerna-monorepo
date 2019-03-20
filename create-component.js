@@ -51,23 +51,28 @@ function Question(){
   "license": "MIT",
   "dependencies": {},
   "peerDependencies": {
-    "prop-types": "^15.7.2"
-    "react": "^16.2.0",
+    "prop-types": "^15.7.2",
+    "react": "^16.8.4",
     "@material-ui/core": "^3.9.2",
     "styled-components": "^4.1.3"
   }
 }
 `);
-      fs.writeFileSync(dirSrc + "/index.js", `import React from 'react'
-
+      fs.writeFileSync(dirSrc + "/index.jsx", `import React from 'react'
+import { Grid } from '@material-ui/core'
 import VHStyledButton from './index.styles'
 
 const ${componentName} = props => (
-  <VHStyledButton onClick={props.onClick}>
-  {
-    props.children
-  }
-  </VHStyledButton>
+  <Grid container alignItems="center">
+    <Grid item xs={2}>
+      Simple content
+    </Grid>
+    <Grid item xs={10}>
+      <VHStyledButton variant="contained" color="primary" onClick={props.onClick}>
+        Apply
+      </VHStyledButton>
+    </Grid>
+</Grid>
 )
 
 export default ${componentName}
@@ -84,7 +89,7 @@ import ${componentName} from '.'
 
 describe('${componentName} Component', function() {
   it('renders without props', function() {
-    const wrapper = mount((<${componentName}>Vanhack</${componentName}>))
+    const wrapper = mount((<${componentName} />))
     const ${componentName}Spec = wrapper.find('${componentName}')
     expect(${componentName}Spec.length).toBe(1)
   })
@@ -93,14 +98,22 @@ describe('${componentName} Component', function() {
       fs.writeFileSync(dirSrc + "/index.story.js", `import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { withInfo } from '@storybook/addon-info';
 
 import ${componentName} from '.'
 
 storiesOf('${StorybookName}/${componentName.split('VH')[1]}', module)
-.add('${componentName} Default', () => (
-  <${componentName} variant="contained" onClick={action()}>
-      New Vanhack Component Created
-  </${componentName}>
+.add('${componentName} Default',
+  withInfo(\`
+
+    import ${componentName} from '${this.questions[0].answer}'
+
+    ~~~js
+    <${componentName} onClick={action()}/>
+    ~~~
+
+  \`)(() =>
+  <${componentName} onClick={action()}/>
 ))
 
 `);

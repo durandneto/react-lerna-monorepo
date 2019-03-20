@@ -8,10 +8,20 @@
   "license": "MIT",
   "dependencies": {
     "prop-types": "^15.7.2",
-    "recordrtc": "^5.5.4"
+    "recordrtc": "^5.5.4",
+    "vh-apply-button": "^0.0.1",
+    "vh-confirm-modal": "^0.0.1",
+    "vh-icon-title-description": "^0.0.1",
+    "vh-img": "^0.0.3",
+    "vh-modal": "^0.0.1",
+    "vh-page-video-record": "^0.0.1",
+    "vh-progress": "^0.0.1",
+    "vh-text": "^0.0.5",
+    "vh-time": "^0.0.1",
+    "vh-title-description": "^0.0.5"
   },
   "peerDependencies": {
-    "react": "^16.2.0",
+    "react": "^16.8.4",
     "styled-components": "^4.1.3"
   }
 }

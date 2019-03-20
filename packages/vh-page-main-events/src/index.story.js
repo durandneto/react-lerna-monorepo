@@ -1,6 +1,7 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import { linkTo } from '@storybook/addon-links'
 
 import VHPageMainEvents from '.'
 
@@ -86,12 +87,21 @@ nextEvents.push(mainEventApplied)
 storiesOf('Templates/Events/main', module)
 
 .add('VHPageMainEvents Default', () => (
-    <VHPageMainEvents mainEvent={mainEventApplied} nextEvents={nextEvents} />
+    <VHPageMainEvents
+        mainEvent={mainEventApplied}
+        nextEvents={nextEvents}
+    />
 ))
 .add('VHPageMainEvents with a non-User', () => (
-    <VHPageMainEvents mainEvent={mainEvent} nextEvents={nextEvents} />
+    <VHPageMainEvents
+        mainEvent={mainEvent}
+        nextEvents={nextEvents}
+    />
 ))
 .add('VHPageMainEvents with a pasted event', () => (
-    <VHPageMainEvents mainEvent={mainEventPasted} nextEvents={nextEvents} />
+    <VHPageMainEvents
+        mainEvent={mainEventPasted}
+        nextEvents={nextEvents}
+    />
 ))
 
