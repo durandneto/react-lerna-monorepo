@@ -26,7 +26,9 @@
     "vh-simple-card": "^0.0.3",
     "vh-text": "^0.0.5",
     "vh-time": "^0.0.1",
+    "vh-timer": "^0.0.1",
     "vh-title-apply-button": "^0.0.1",
+    "vh-title-breadcrumb": "^0.0.1",
     "vh-title-description": "^0.0.5",
     "vh-title-description-image": "^0.0.1",
     "vh-video-maker": "^0.0.1"

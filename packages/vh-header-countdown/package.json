@@ -1,17 +1,13 @@
 {
-  "name": "vh-modal",
+  "name": "vh-header-countdown",
   "version": "0.0.1",
-  "description": "## VH vh-modal Component",
+  "description": "## VH vh-header-countdown Component",
   "main": "dist/index.js",
   "module": "src/index.js",
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
-    "vh-breadcrumb": "^0.0.1",
     "vh-img": "^0.0.3",
-    "vh-page-video-record": "^0.0.1",
-    "vh-text": "^0.0.5",
-    "vh-time": "^0.0.1",
     "vh-timer": "^0.0.1",
     "vh-title-breadcrumb": "^0.0.1"
   },

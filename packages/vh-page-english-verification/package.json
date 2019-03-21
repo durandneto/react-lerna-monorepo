@@ -23,6 +23,8 @@
     "vh-progress": "^0.0.1",
     "vh-text": "^0.0.5",
     "vh-time": "^0.0.1",
+    "vh-timer": "^0.0.1",
+    "vh-title-breadcrumb": "^0.0.1",
     "vh-title-description": "^0.0.5",
     "vh-video-maker": "^0.0.1"
   },

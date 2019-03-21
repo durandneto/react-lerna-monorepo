@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions'
 import { withInfo } from '@storybook/addon-info';
 
 import VHTimer from '.'
-var tomorrow = new Date();
+const tomorrow = new Date();
 tomorrow.setDate(tomorrow.getDate() + 1);
 
 storiesOf('Components/Timer', module)
