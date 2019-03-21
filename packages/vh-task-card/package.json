@@ -1,7 +1,7 @@
 {
-  "name": "vh-breadcrumb",
+  "name": "vh-task-card",
   "version": "0.0.1",
-  "description": "## VH vh-breadcrumb Component",
+  "description": "## VH vh-task-card Component",
   "main": "dist/index.js",
   "module": "src/index.js",
   "author": "Durand Neto",
@@ -11,9 +11,7 @@
     "vh-icon-title-description": "^0.0.1",
     "vh-image-title-description": "^0.0.1",
     "vh-img": "^0.0.3",
-    "vh-text": "^0.0.5",
-    "vh-timer": "^0.0.1",
-    "vh-title-breadcrumb": "^0.0.1"
+    "vh-text": "^0.0.5"
   },
   "peerDependencies": {
     "@material-ui/core": "^3.9.2",

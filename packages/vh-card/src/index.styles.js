@@ -5,7 +5,6 @@ export const CardContainer = styled(Grid)`
   display: flex;
   flex-direction: column;
   flex: 1;
-  margin: 8px 0;
   border-radius: 4px;
   background-color: #FFFFFF;
   box-shadow: 0 0 6px 0 rgba(0,0,0,0.1), 0 2px 12px 0 rgba(0,0,0,0.1);

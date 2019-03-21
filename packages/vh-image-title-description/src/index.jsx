@@ -12,6 +12,7 @@ const VHImageTitleDescription = props => (
       <VHTitleDescription
         title={props.title}
         description={props.description}
+        direction={props.direction}
         cta={props.cta}
         withLine={props.withLine}
         applied={props.applied}

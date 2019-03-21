@@ -7,7 +7,11 @@
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
+    "vh-card": "^0.0.6",
+    "vh-icon-title-description": "^0.0.1",
+    "vh-image-title-description": "^0.0.1",
     "vh-img": "^0.0.3",
+    "vh-text": "^0.0.5",
     "vh-timer": "^0.0.1",
     "vh-title-breadcrumb": "^0.0.1"
   },

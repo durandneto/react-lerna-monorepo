@@ -11,6 +11,7 @@ const VHImg = (props) => {
         src={props.source}
         alt={props.alt}
         title={props.title}
+        style={{width:"fit-content"}}
       />
     )
   } else {

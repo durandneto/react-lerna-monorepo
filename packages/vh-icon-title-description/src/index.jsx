@@ -1,9 +1,8 @@
 import React from 'react'
-import VHText from 'vh-text'
 import VHImg from 'vh-img'
 
 const VHIconTitleDescription = props => (
-  <div style={{display:'flex'}}>
+  <div style={{display:'flex', alignItems: 'center'}}>
     {
       props.icon && (
         <div style={{width: 'min-content', marginRight: '4px'}}>
@@ -11,20 +10,22 @@ const VHIconTitleDescription = props => (
         </div>
       )
     }
-    {
-      props.description && (
-        <div style={{	color: 'rgba(0,0,0,0.54)'}}>
-          {
-            props.description && (
-              <span style={{ marginRight: '4px', color: 'rgba(0,0,0,0.87)'}}>
-                {props.title}
-              </span>
-            )
-          }
-          {props.description}
-        </div>
-      )
-    }
+    <div style={{	color: 'rgba(0,0,0,0.54)'}}>
+      {
+        props.title && (
+          <span style={{ marginRight: '4px', color: 'rgba(0,0,0,0.87)'}}>
+            {props.title}
+          </span>
+        )
+      }
+      {
+        props.description && (
+          <React.Fragment>
+            {props.description}
+          </React.Fragment>
+        )
+      }
+    </div>
   </div>
 )
 
