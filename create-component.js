@@ -105,13 +105,7 @@ import ${componentName} from '.'
 storiesOf('${StorybookName}/${componentName.split('VH')[1]}', module)
 .add('${componentName} Default',
   withInfo(\`
-
     import ${componentName} from '${this.questions[0].answer}'
-
-    ~~~js
-    <${componentName} onClick={action()}/>
-    ~~~
-
   \`)(() =>
   <${componentName} onClick={action()}/>
 ))

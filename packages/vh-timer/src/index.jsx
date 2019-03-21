@@ -13,10 +13,10 @@ const VHTimer = props => {
   const [months, setMonths] = React.useState(0)
   const [currentDate, setCurrent] = React.useState(0)
 
-  const start = (startDate) => {
+  const start = (endDate) => {
     requestAnimationFrame(()=>{
       const currentDate = new Date()
-      if (currentDate >= startDate) {
+      if (currentDate >= endDate) {
         setSeconds(0)
         setMinutes(0)
         setHours(0)
@@ -30,11 +30,11 @@ const VHTimer = props => {
           diffSeconds = 0
         }
 
-        let diffMinutes = startDate.getMinutes() - ( currentDate.getMinutes() - 60)
-        if (currentDate.getMinutes() < startDate.getMinutes() ) {
-          diffMinutes = parseInt(startDate.getMinutes()) - currentDate.getMinutes()
+        let diffMinutes = endDate.getMinutes() - ( currentDate.getMinutes() - 60)
+        if (currentDate.getMinutes() < endDate.getMinutes() ) {
+          diffMinutes = parseInt(endDate.getMinutes()) - currentDate.getMinutes()
         }
-        let diffHours = startDate.getHours() - currentDate.getHours()
+        let diffHours = endDate.getHours() - currentDate.getHours()
 
         if ( diffMinutes > 0) {
           diffMinutes -=1
@@ -44,10 +44,10 @@ const VHTimer = props => {
           diffMinutes = 0
         }
 
-        const diffDays = startDate.getDate() - currentDate.getDate()
+        const diffDays = endDate.getDate() - currentDate.getDate()
         diffHours = parseInt(diffHours) + ( parseInt(diffDays) * 24)
 
-        const diffMonths = startDate.getMonth() - currentDate.getMonth()
+        const diffMonths = endDate.getMonth() - currentDate.getMonth()
 
         if ( diffHours > 0) {
           diffHours -=1
@@ -70,13 +70,13 @@ const VHTimer = props => {
         setHours(diffHours)
         setDays(diffDays)
         setMonths(diffMonths)
-        start(startDate)
+        start(endDate)
       }
     })
   }
 
   React.useEffect(() => {
-    start(new Date(props.startDate))
+    start(new Date(props.endDate))
   }, [])
 
   return (
@@ -86,7 +86,7 @@ const VHTimer = props => {
           <React.Fragment>
             <div>
               {
-                props.startDate
+                props.endDate
               }
             </div>
             <div>
@@ -104,12 +104,12 @@ const VHTimer = props => {
           </React.Fragment>
         )
       }
-      <TimerContainer>
+    <TimerContainer>
       <VHTime number={hours} text="hours" />
       <VHTime number={minutes} text="min" />
       <VHTime number={seconds} text="sec" />
     </TimerContainer>
-    </React.Fragment>
+  </React.Fragment>
   )
 }
 

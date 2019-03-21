@@ -1,19 +1,13 @@
 {
-  "name": "vh-icon-title-description",
+  "name": "vh-breadcrumb",
   "version": "0.0.1",
-  "description": "## VH vh-icon-title-description Component",
+  "description": "## VH vh-breadcrumb Component",
   "main": "dist/index.js",
   "module": "src/index.js",
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
-    "vh-breadcrumb": "^0.0.1",
-    "vh-confirm-modal": "^0.0.1",
-    "vh-img": "^0.0.3",
-    "vh-modal": "^0.0.1",
-    "vh-page-video-record": "^0.0.1",
-    "vh-text": "^0.0.5",
-    "vh-time": "^0.0.1"
+    "vh-text": "^0.0.5"
   },
   "peerDependencies": {
     "@material-ui/core": "^3.9.2",

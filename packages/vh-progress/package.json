@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "vh-apply-button": "^0.0.1",
+    "vh-breadcrumb": "^0.0.1",
     "vh-confirm-modal": "^0.0.1",
     "vh-icon-title-description": "^0.0.1",
     "vh-img": "^0.0.3",

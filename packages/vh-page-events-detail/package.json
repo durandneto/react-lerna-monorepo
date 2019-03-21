@@ -9,6 +9,7 @@
   "dependencies": {
     "prop-types": "^15.7.2",
     "vh-apply-button": "^0.0.1",
+    "vh-breadcrumb": "^0.0.1",
     "vh-card": "^0.0.6",
     "vh-confirm-modal": "^0.0.1",
     "vh-faq": "^0.0.4",

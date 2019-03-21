@@ -7,6 +7,8 @@
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
+    "vh-breadcrumb": "^0.0.1",
+    "vh-text": "^0.0.5",
     "vh-time": "^0.0.1"
   },
   "peerDependencies": {

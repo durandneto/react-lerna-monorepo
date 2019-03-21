@@ -14,12 +14,12 @@ storiesOf('Components/Timer', module)
     import VHTimer from 'vh-timer'
 
     ~~~js
-    <VHTimer startDate="${tomorrow.toString()}"/>
+    <VHTimer endDate="${tomorrow.toString()}"/>
     ~~~
 
   `)(() =>
   <VHTimer
-    startDate={tomorrow.toString()}
+    endDate={tomorrow.toString()}
     onEndTime={action()}
   />
 ))
@@ -29,13 +29,13 @@ storiesOf('Components/Timer', module)
     import VHTimer from 'vh-timer'
 
     ~~~js
-    <VHTimer startDate="${tomorrow.toString()}"/>
+    <VHTimer endDate="${tomorrow.toString()}"/>
     ~~~
 
   `)(() =>
   <VHTimer
     debugger
-    startDate={tomorrow.toString()}
+    endDate={tomorrow.toString()}
     onEndTime={action()}
   />
 ))
