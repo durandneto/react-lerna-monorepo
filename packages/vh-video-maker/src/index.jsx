@@ -108,7 +108,7 @@ class RecordPage extends React.Component {
       if ( this.props.onRequestMedia)
         this.props.onRequestMedia({video: true, audio: this.state.allowAudio})
         console.log('requestUserVideo:',{video: true, audio: this.state.allowAudio})
-      var video = document.getElementById('myvideo')
+      var video = document.getElementById('vh-video-streaming')
       video.srcObject = stream
       video.play()
     })
@@ -159,6 +159,19 @@ requestUserAudio() {
 
   handleModalCTAClick () {
     console.log('click no modal', this.state.handleModalMessage.type)
+    switch (true) {
+      case this.state.handleModalMessage.type === 'StartTest':
+        break
+      case this.state.handleModalMessage.type === 'SendVideoToApi':
+        break
+      case this.state.handleModalMessage.type === 'DiscartVideo':
+        this.setState({
+          view: 'initial',
+          isRecording: false,
+          openConfirmModal: false,
+        })
+        break
+    }
   }
 
   handleCloseConfirmModal () {
@@ -188,7 +201,7 @@ requestUserAudio() {
   enable = () => {
     captureUserMedia((stream) => {
       window.localStream = stream
-      var video = document.getElementById('myvideo')
+      var video = document.getElementById('vh-video-streaming')
       video.srcObject = stream
       video.play()
     })
@@ -200,7 +213,7 @@ requestUserAudio() {
     // localStream.getVideoTracks()[0].stop()
 
     // this.state.recordVideo.stopisRecording(() => {
-    //   var video2 = document.getElementById('myvideo2')
+    //   var video2 = document.getElementById('vh-video-streaming2')
     //   video2.src = window.URL.createObjectURL(this.state.recordVideo.blob)
     // })
     if (this.state.isRecording) {
@@ -226,7 +239,12 @@ requestUserAudio() {
           <PageContainer noVideo={!this.state.allowVideo}>
             {
               this.state.allowVideo && (
-                <video muted id="myvideo" height="342"/>
+                <video
+                  muted
+                  id="vh-video-streaming"
+                  height={this.props.fullwidth ? '342' : 'initial'}
+                  width={this.props.fullwidth ? '100%' : 'initial'}
+                />
               )
             }
             <ControlsContainer>
@@ -258,7 +276,7 @@ requestUserAudio() {
             }
           </ControlsContainer>
 
-            {/* <div><video id="myvideo2" controls /></div>
+            {/* <div><video id="vh-video-streaming2" controls /></div>
             {this.state.uploading ?
               <div>Uploading...</div> : null}
             <div><button onClick={this.startRecord}>Start Record</button></div>

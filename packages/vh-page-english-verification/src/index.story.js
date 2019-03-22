@@ -273,7 +273,7 @@ const generalInformation = [
     { title: 'CODE VERIFICATION', content: codeVerification },
   ];
 
-storiesOf('Templates/English Verification', module)
+storiesOf('Templates/English Verification/main', module)
 .add('VHPageEnglishVerification Unlogged user', () => (
     <VHPageEnglishVerification
         cards={card}

@@ -52,18 +52,23 @@ storiesOf('Components/Video Maker', module)
 
     import VHVideoMaker from 'vh-video-maker'
 
-    ~~~js
-    <VHVideoMaker
-        mockTest
-        seconds={1}
-        onRequestMedia={this.handleOnRequestMedia}
-        onRecordMedia={this.handleOnRecordMedia}
+  `)(() =>
+  <VHVideoMaker
+    mockTest
+    seconds={1}
+    onRecordMedia={action()}
+    onRecordMedia={action()}
     />
-    ~~~
+  ))
+.add('VHVideoMaker with 1 seconds and mock test result and width 100%',
+  withInfo(`
+
+    import VHVideoMaker from 'vh-video-maker'
 
   `)(() =>
   <VHVideoMaker
     mockTest
+    fullwidth
     seconds={1}
     onRecordMedia={action()}
     onRecordMedia={action()}

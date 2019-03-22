@@ -49,11 +49,35 @@ const mock2 = {
         },
     ]
 }
+const mock3 = {
+    title: "Resources",
+    list:[
+        {
+            bullet: true,
+            text: "These are the resources you will need to record your videos and complete the test:"
+        },
+        {
+            bullet: true,
+            text: "A quiet room with good lighting"
+        },
+        {
+            bullet: true,
+            text: "A computer with a webcam or a mobile device able record good quality videos"
+        },
+        {
+            bullet: true,
+            text: "A good and consistent Internet connection (WiFi or Ethernet are advisable)"
+        },
+    ]
+}
 
 storiesOf('Molecules/ImageTitleList', module)
 
 .add('default', () => (
     <VHImageTitleList data={mock} />
+))
+.add('without image', () => (
+    <VHImageTitleList data={mock3} />
 ))
 .add('multiple', () => (
     <React.Fragment>

@@ -6,9 +6,13 @@ import VHImg  from 'vh-img'
 
 const VHImageTitleDescription = props => (
   <Grid container>
-    <Grid item xs={12} sm={2} md={2} alignItems="flex-start" justify="center" container>
-      <VHImg source={props.data.source} />
-    </Grid>
+    {
+      props.data.source && (
+        <Grid item xs={12} sm={2} md={2} alignItems="flex-start" justify="center" container>
+          <VHImg source={props.data.source} />
+        </Grid>
+      )
+    }
     <Grid container direction="row" item xs={12} sm={10} md={10}>
       <Grid item xs={12} >
         <div style={{display: 'flex', marginBottom: '16px'}}>

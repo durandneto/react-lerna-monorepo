@@ -10,7 +10,7 @@ import {
 
 const VHTaskCard = props => (
   <Container container alignItems="center" done={props.done}>
-    <VHCard padding2>
+    <VHCard>
       <VHImg
         source="http://via.placeholder.com/72x72.png"
       />
@@ -31,7 +31,7 @@ const VHTaskCard = props => (
       />
       <VHIconTitledescription
         title="Deliverable:"
-        description="90 sec video"
+        description="60~80 sec video"
       />
     </VHCard>
 </Container>
