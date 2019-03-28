@@ -7,7 +7,7 @@ import VHPageEnglishEvaluation from '.'
 
 const data = {
   id: 1,
-  startDate: '2019-03-15T19:17:08.837',
+  startDate: '2019-03-28 19:17:08',
   tasks: [true, true, false, false, false]
 }
 

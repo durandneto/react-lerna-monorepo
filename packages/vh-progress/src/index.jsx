@@ -5,7 +5,7 @@ import {
   Typography,
 } from '@material-ui/core'
 
-const  LinearDeterminate = props => {
+const  VHPRogress = props => {
   const [completed, setCompleted] = React.useState(0)
   const [currentSecond, setCurrentSecond] = React.useState(0)
 
@@ -63,4 +63,4 @@ const  LinearDeterminate = props => {
   )
 }
 
-export default LinearDeterminate
+export default VHPRogress

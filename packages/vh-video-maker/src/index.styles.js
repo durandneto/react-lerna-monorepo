@@ -23,4 +23,7 @@ export const ControlsContainer = styled.div`
   background: rgba(0,0,0,0.5);
   padding: 8px;
   margin: 4px;
+  * {
+    color: white !important;
+  }
 `

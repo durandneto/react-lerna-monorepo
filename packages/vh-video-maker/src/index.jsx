@@ -13,19 +13,24 @@ import {
   ControlsContainer,
 } from './index.styles'
 
-const hasGetUserMedia = navigator.mediaDevices && navigator.mediaDevices.getUserMedia
+const hasGetUserMedia = navigator && navigator.getUserMedia
 const captureUserMedia = callback => {
   var params = {video: true, audio: true }
 
   navigator.getUserMedia(params, callback, (error) => {
-    // alert('Media Error')
+    callback(false)
+    console.log('checking Media')
   })
 }
 const captureUserVideo = callback => {
   var params = {video: true, audio: false}
 
   navigator.getUserMedia(params, callback, (error) => {
-    // alert('video error')
+    setTimeout(() => {
+      callback(false)
+      captureUserVideo(callback)
+    }, 1000);
+    console.log('checking Video')
   })
 }
 
@@ -33,7 +38,11 @@ const captureUserAudio = callback => {
   var params = {audio: true, video: false}
 
   navigator.getUserMedia(params, callback, (error) => {
-    // alert('Audio error')
+    setTimeout(() => {
+      callback(false)
+      captureUserAudio(callback)
+    }, 1000);
+    console.log('checking Audio')
   })
 }
 
@@ -58,7 +67,7 @@ const ModalDiscartVideoMessage = {
   error: true,
 }
 
-class RecordPage extends React.Component {
+class VHVideoMaker extends React.Component {
   constructor(props) {
     super(props)
 
@@ -94,36 +103,44 @@ class RecordPage extends React.Component {
   componentWillUnmount() {
     // stop only audio
     if (localAudioStream)
-      localAudioStream.getAudioTracks()[0].stop()
+    localAudioStream.getAudioTracks()[0].stop()
     //stop only audio
     if (localVideoStream)
       localVideoStream.getVideoTracks()[0].stop()
   }
 
   requestUserVideo() {
-    console.log('requestUserVideo: request')
     captureUserVideo((stream) => {
-      window.localVideoStream = stream
-      this.setState({allowVideo: true})
-      if ( this.props.onRequestMedia)
+      console.log('requestUserVideo: request', stream)
+      if (stream) {
+        window.localVideoStream = stream
+        this.setState({allowVideo: true})
+        if ( this.props.onRequestMedia)
         this.props.onRequestMedia({video: true, audio: this.state.allowAudio})
         console.log('requestUserVideo:',{video: true, audio: this.state.allowAudio})
-      var video = document.getElementById('vh-video-streaming')
-      video.srcObject = stream
-      video.play()
-    })
-}
-
-requestUserAudio() {
-  console.log('requestUserAudio: request')
-  captureUserAudio((stream) => {
-    window.localAudioStream = stream
-    this.setState({allowAudio: true})
-    if ( this.props.onRequestMedia)
-    this.props.onRequestMedia({audio: true, video: this.state.allowVideo})
-      console.log('requestUserAudio:',{audio: true, video: this.state.allowVideo})
+        var video = document.getElementById('vh-video-streaming')
+        video.srcObject = stream
+        video.play()
+      } else {
+        this.setState({allowVideo: false})
+      }
     })
   }
+
+  requestUserAudio() {
+    captureUserAudio((stream) => {
+      console.log('requestUserAudio: request', stream)
+      if (stream) {
+        window.localAudioStream = stream
+        this.setState({allowAudio: true})
+        if ( this.props.onRequestMedia)
+          this.props.onRequestMedia({audio: true, video: this.state.allowVideo})
+          console.log('requestUserAudio:',{audio: true, video: this.state.allowVideo})
+      } else {
+        this.setState({allowAudio: false})
+      }
+    })
+}
 
   handleOpenConfirmModal (type) {
     switch (true) {
@@ -183,7 +200,24 @@ requestUserAudio() {
   handleStartRecord() {
     console.log('start recording')
     captureUserMedia((stream) => {
-      this.setState({isRecording: true, view: 'recordingVideo'})
+      if (stream) {
+        this.setState({
+          allowVideo: true,
+          allowAudio: true,
+          isRecording: true,
+          view: 'recordingVideo',
+        })
+      } else {
+        this.setState({
+          allowVideo: false,
+          allowAudio: false,
+          isRecording: false,
+          view: 'initial',
+        })
+        this.requestUserVideo()
+        this.requestUserAudio()
+      }
+      // this.setState({isRecording: true, view: 'recordingVideo'})
     // //   this.state.recordVideo = RecordRTC(stream, { type: 'video' })
     // //   this.state.recordVideo.startRecording()
     })
@@ -196,6 +230,10 @@ requestUserAudio() {
   handleResetRecord() {
     console.log('reset recording')
     this.setState({isRecording: false, view: 'initial'})
+  }
+  handleCancelInitialRecord() {
+    console.log('handleCancelInitialRecord')
+    this.props.onCancelInitialRecord(this.state)
   }
 
   enable = () => {
@@ -253,9 +291,12 @@ requestUserAudio() {
                 <AllowContainer>
                   {
                     !this.state.allowAudio && (
-                      <button onClick={this.requestUserAudio}>
-                        Check Audio
-                      </button>
+                      <VHIconTitleDescription
+                        title="Check your audio permission"
+                        error={true}
+                        icon={{
+                          icon: 'mic-off'}}
+                      />
                     )
                   }
                 </AllowContainer>
@@ -266,9 +307,12 @@ requestUserAudio() {
                 <AllowContainer>
                   {
                     !this.state.allowVideo && (
-                      <button onClick={this.requestUserVideo}>
-                        Check Video
-                      </button>
+                      <VHIconTitleDescription
+                        title="Check your video permission"
+                        error={true}
+                        icon={{
+                          icon: 'cam-off'}}
+                      />
                     )
                   }
                 </AllowContainer>
@@ -285,14 +329,43 @@ requestUserAudio() {
           </PageContainer>
         </Grid>
         <Grid container justify="flex-end">
-          <Grid item xs={12}>
-            {`audio: ${this.state.allowAudio} - video: ${this.state.allowVideo}`}
+          <Grid item container xs={12}>
+            <VHIconTitleDescription
+              title="Microphone"
+              success={this.state.allowAudio}
+              error={!this.state.allowAudio}
+              icon={{
+                icon: this.state.allowAudio ? 'mic' : 'mic-off'}}
+            />
+            <VHIconTitleDescription
+              title="Camera"
+              success={this.state.allowVideo}
+              error={!this.state.allowVideo}
+              icon={{
+                icon: this.state.allowVideo ? 'cam' : 'cam-off'}}
+            />
           </Grid>
         </Grid>
           {
             this.state.view === 'initial' && (
-              <Grid container justify="flex-end">
-                <Grid item xs={12}>
+              <Grid container justify="space-between">
+              {
+                this.props.onCancelInitialRecord && (
+                  <Grid item xs={2}>
+                    <VHApplyButton
+                      fullWidth
+                      label="Cancel"
+                      outline
+                      _cta={() => {
+                          this.handleCancelInitialRecord()
+                        }
+                      }
+                      large
+                    />
+                  </Grid>
+                )
+              }
+                <Grid item xs={this.props.onCancelInitialRecord ? 9 : 12}>
                   {
                     <VHApplyButton
                       fullWidth
@@ -314,6 +387,7 @@ requestUserAudio() {
                 <Grid container justify="flex-end">
                   <Grid item xs={12} style={{margin: '16px 0'}}>
                     <VHIconTitleDescription
+                      success
                       description="Your microphone and camera are ready to be used on the VanHack English Verification Test."
                       icon={{icon: 'check-circle'}}
                       onClick={()=>{}}
@@ -349,7 +423,7 @@ requestUserAudio() {
                     <VHApplyButton
                       fullWidth
                       isDisabled={!this.state.allowAudio || !this.state.allowVideo}
-                      label="cancel"
+                      label="Discart"
                       outline
                       color="secondary"
                       _cta={()=> {
@@ -408,5 +482,5 @@ requestUserAudio() {
   }
 }
 
-export default RecordPage
+export default VHVideoMaker
 

@@ -5,35 +5,53 @@ import VHText from 'vh-text'
 import VHIconTitledescription from 'vh-icon-title-description'
 
 import {
-  Container
+  Container,
+  SelectedContainer,
+  SelectedIconContainer,
 } from './index.styles'
 
 const VHTaskCard = props => (
-  <Container container alignItems="center" done={props.done}>
-    <VHCard>
+  <Container
+    container
+    alignItems="center"
+    done={props.done}
+    selected={props.selected}
+    onClick={props.onClick}>
+    <VHCard className="VHCard">
       <VHImg
         source="http://via.placeholder.com/72x72.png"
       />
       {
         props.done ? (
           <VHIconTitledescription
-            title="Task 01"
+            title={props.title}
             highlight
             icon={{icon: 'check-circle'}}
           />
         ) : (
-          <VHText text="Task 01" variant="h6" />
+          <VHText text={props.title} variant="h6" />
         )
       }
       <VHIconTitledescription
         title="Content Medium:"
-        description="Text"
+        description={props.type}
       />
       <VHIconTitledescription
         title="Deliverable:"
-        description="60~80 sec video"
+        description={props.deliverable}
       />
     </VHCard>
+    {
+      props.selected && (
+        <SelectedContainer>
+          <SelectedIconContainer>
+            <VHImg
+              icon={{icon: 'chevron-right'}}
+            />
+          </SelectedIconContainer>
+        </SelectedContainer>
+      )
+    }
 </Container>
 )
 

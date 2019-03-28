@@ -22,11 +22,24 @@ class VHPageVideoRecord extends React.Component {
     this.setState({
       allowVideo: UserMedia.video,
       allowAudio: UserMedia.audio,
+    }, () => {
+      this.props.onRequestMedia(this.state)
     })
+
   }
 
   handleOnRecordMedia = Record => {
     console.log('handleOnRecordMedia', Record)
+  }
+
+  handleOnCancelInitialRecord = (UserMedia) => {
+    console.log('handleOnCancelInitialRecord')
+    this.setState({
+      allowVideo: UserMedia.allowVideo,
+      allowAudio: UserMedia.allowAudio,
+    }, () => {
+      this.props.onCancelInitialRecord(this.state)
+    })
   }
 
   render() {
@@ -53,6 +66,7 @@ class VHPageVideoRecord extends React.Component {
               seconds={this.props.seconds}
               onRequestMedia={this.handleOnRequestMedia}
               onRecordMedia={this.handleOnRecordMedia}
+              onCancelInitialRecord={this.handleOnCancelInitialRecord}
             />
           </Grid>
         </Grid>

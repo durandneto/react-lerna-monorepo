@@ -7,6 +7,7 @@
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
+
     "prop-types": "^15.7.2",
     "ramda": "^0.26.1",
     "vh-apply-button": "^0.0.1",

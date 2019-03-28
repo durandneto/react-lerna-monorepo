@@ -23,6 +23,11 @@ export const Container = styled.div`
   justify-content: center;
 	display: flex;
 `
+
+export const HeaderContainer = styled.div`
+	max-width: 1000px;
+	flex: 1;
+`
 export const StartVideoContainer = styled.div`
   padding: 64px 8px 32px;
   flex: 1;

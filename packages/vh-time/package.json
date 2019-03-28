@@ -7,6 +7,7 @@
   "author": "Durand Neto",
   "license": "MIT",
   "dependencies": {
+
     "vh-breadcrumb": "^0.0.1",
     "vh-card": "^0.0.6",
     "vh-header-countdown": "^0.0.1",

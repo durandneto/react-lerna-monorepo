@@ -11,19 +11,12 @@ storiesOf('Components/Video Maker', module)
 
     import VHVideoMaker from 'vh-video-maker'
 
-    ~~~js
-    <VHVideoMaker
-        seconds={30}
-        onRequestMedia={this.handleOnRequestMedia}
-        onRecordMedia={this.handleOnRecordMedia}
-    />
-    ~~~
-
   `)(() =>
   <VHVideoMaker
     seconds={30}
     onRequestMedia={action()}
     onRecordMedia={action()}
+    onCancelInitialRecord={action()}
     />
 ))
 .add('VHVideoMaker with 5 seconds',
@@ -31,19 +24,14 @@ storiesOf('Components/Video Maker', module)
 
     import VHVideoMaker from 'vh-video-maker'
 
-    ~~~js
-    <VHVideoMaker
-        seconds={5}
-        onRequestMedia={this.handleOnRequestMedia}
-        onRecordMedia={this.handleOnRecordMedia}
-    />
     ~~~
 
   `)(() =>
   <VHVideoMaker
     seconds={5}
+    onRequestMedia={action()}
     onRecordMedia={action()}
-    onRecordMedia={action()}
+    onCancelInitialRecord={action()}
     />
 ))
 
@@ -56,8 +44,9 @@ storiesOf('Components/Video Maker', module)
   <VHVideoMaker
     mockTest
     seconds={1}
+    onRequestMedia={action()}
     onRecordMedia={action()}
-    onRecordMedia={action()}
+    onCancelInitialRecord={action()}
     />
   ))
 .add('VHVideoMaker with 1 seconds and mock test result and width 100%',
@@ -70,8 +59,9 @@ storiesOf('Components/Video Maker', module)
     mockTest
     fullwidth
     seconds={1}
+    onRequestMedia={action()}
     onRecordMedia={action()}
-    onRecordMedia={action()}
+    onCancelInitialRecord={action()}
     />
 ))
 

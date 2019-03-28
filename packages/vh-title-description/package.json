@@ -6,6 +6,7 @@
   "module": "src/index.js",
   "author": "Durand Neto",
   "dependencies": {
+
     "prop-types": "^15.7.2",
     "vh-apply-button": "^0.0.1",
     "vh-breadcrumb": "^0.0.1",

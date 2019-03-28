@@ -13,7 +13,7 @@
     "start": "NODE_ENV=development start-storybook -p 9001 -c .storybook",
     "test": "jest --coverage --verbose",
     "bootstrap": "lerna bootstrap",
-    "build": "lerna exec --parallel -- babel  --presets @babel/preset-react --plugins=@babel/plugin-syntax-dynamic-import,@babel/plugin-proposal-class-properties  src -d dist --ignore spec.js,story.js",
+    "build": "lerna exec --parallel -- babel  --presets @babel/preset-react --plugins=@babel/plugin-syntax-dynamic-import,@babel/plugin-proposal-class-properties,@babel/plugin-transform-arrow-functions  src -d dist --ignore src/**/*.spec.js,src/**/*.story.js",
     "build-storybook": "build-storybook",
     "publish": "lerna publish --skip-git --skip-npm",
     "prepublish": "npm run build",

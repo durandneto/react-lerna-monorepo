@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { DoneAllSharp } from '@material-ui/icons';
 
 export const Container = styled.div`
     img {
@@ -21,4 +20,28 @@ export const Container = styled.div`
         }
     `)}
 
+    ${({selected}) => selected && (`
+        * {
+            background-color: #0675CE !important;
+            color: #fff !important;
+        }
+    `)}
+
+`
+
+export const SelectedContainer = styled.div`
+    display: flex;
+    justify-content: center;
+    * {
+        background-color: #fff !important;
+        color: #0675CE  !important;
+    }
+`
+export const SelectedIconContainer = styled.div`
+    position: absolute;
+    transform: rotate(90deg);
+    * {
+        background-color: #fff !important;
+        color: #0675CE  !important;
+    }
 `
